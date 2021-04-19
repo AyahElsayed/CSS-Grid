@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grids</title>
+
+    <style>
+        body{
+            margin-top: 40px;
+            padding: 0 50px;
+        }
+        .container{
+            background: #333;
+            display: grid;
+            grid-template-columns: repeat(auto-fit , minmax(100px,1fr)); 
+            /* auto fill => fill as much as you can within your width */
+            /* create additional columns as much as you can in your space but not used until i add more divs 
+            and keep thats unused colonms as it is 
+            - only fill your min width */
+
+            /* auto fit => also create additional columns as much as you can in your space 
+            but not appear it until i need 
+            - stretching as much as you can 
+            - fill more than your min width */
+
+            /* grid-template-columns: repeat(5 , 200px); */
+            /* only create 5 columns*/
+            grid-gap: 10px;
+        }
+        .box{
+            background: rgb(202, 100, 100);
+            padding: 50px 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+    </div>
+</body>
+</html>
