@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Named Grid Areas</title>
+
+    <style>
+        body{margin-top: 40px;}
+        #container{
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 100px auto 100px; /*  auto => automaticaly expand to the content */
+            grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer"
+            ;
+            grid-gap: 10px;
+        }
+        header{
+            grid-area: header;
+            background: red;
+        }
+        nav{
+            grid-area: nav;
+            background: #e3e3e3;
+        }
+        main{
+            grid-area: main;
+            background: yellow;
+        }
+        footer{
+            grid-area: footer;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <header>header area</header>
+        <nav>navigation area</nav>
+        <main>main area</main>
+        <footer>footer area</footer>
+    </section>
+</body>
+</html>
